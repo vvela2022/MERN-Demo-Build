@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {People} = require('../models')
+const {People} = require('../models')//this line is what is importing the poeple model into the controller from the index page. (the index page is referencing the people.js page which is why we can just require ../models)
 
 //Routes
 router.get('/', async (req, res) => {
@@ -49,7 +49,6 @@ router.delete('/:id', async (req, res) => {
         console.log(error)
     }
 })
-
 
 
 module.exports = router;
