@@ -22,7 +22,8 @@ router.post('/', async (req, res) => {
     //is best practice to add in the status code you are expecting
 })
 
-// //PEOPLE SHOW ROUTE
+//PEOPLE SHOW ROUTE
+//you don't necessarily need a show route in the back-end
 router.get('/:id', async (req, res) => {
     try{
         res.status(200).json(await People.findById(req.params.id));
